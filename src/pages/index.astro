@@ -1,81 +1,100 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon";
+
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout>
+  <section class="min-h-[80vh] ">
+    <div class="lg:flex py-4 lg:py-8  justify-evenly items-center h-full min-h-[80vh]">
+      <div class="flex justify-center mb-6">
+        <div class="lg:my-0 my-12">
+          <h1 class="lg:text-6xl  text-3xl uppercase  mb-2 dark:text-white">Título</h1>
+          <p class="lg:text-3xl text-xl">Descripción de la página</p>
+          <button class="mt-12 bg-[#b6902f] px-6 py-3 text-sm rounded-[2px]"> Comenzar  </button>
+        </div>
+      </div>
+      <div class="relative w-fit mx-auto lg:m-0 ">
+        <img src="/casa.jpg" alt="" class="rounded-t-full mx-auto w-[300px] h-[500px] lg:w-[400px] lg:h-[700px]  object-cover z-20">
+        <div class="rounded-t-full mx-auto w-[300px] h-[500px] lg:w-[400px] lg:h-[700px] object-cover absolute -left-6 border-[#323525] -z-10 top-0  border"> </div>
+      </div>
+    </div>
+  </section>
+  <section class="rounded-r-[50px] lg:rounded-r-[150px] mt-6 min-h-screen bg-[#6f7959]">
+    <div class="pt-12 overflow-hidden flex justify-center gap-8 lg:pt-32 pb-24">
+      <img src="/plano.jpg" alt="" class="lg:w-[350px] lg:h-[400px] object-cover w-[250px] h-[300px] rounded-t-full shadow-right  ">
+      <img src="/plano.jpg" alt="" class="lg:w-[350px] lg:h-[400px] object-cover w-[250px] h-[300px] rounded-t-full shadow-right  ">
+      <img src="/plano.jpg" alt="" class="lg:w-[350px] lg:h-[400px] object-cover w-[250px] h-[300px] rounded-t-full shadow-right  ">
+      <img src="/plano.jpg" alt="" class="lg:w-[350px] lg:h-[400px] object-cover w-[250px] h-[300px] rounded-t-full shadow-right  ">
+      <img src="/plano.jpg" alt="" class="lg:w-[350px] lg:h-[400px] object-cover w-[250px] h-[300px] rounded-t-full shadow-right  ">
+      <img src="/plano.jpg" alt="" class="lg:w-[350px] lg:h-[400px] object-cover w-[250px] h-[300px] rounded-t-full shadow-right  ">
+      <img src="/plano.jpg" alt="" class="lg:w-[350px] lg:h-[400px] object-cover w-[250px] h-[300px] rounded-t-full shadow-right  ">
+    </div> 
+
+    <div class=" bg-[#afb277] rounded-tr-[50px] lg:rounded-tr-[250px]  w-[95vw] lg:w-[80vw] py-3 ">
+      <div class="flex flex-col gap-6 items-center   lg:flex-row lg:justify-between lg:p-20 my-10">
+        <div class="lg:self-start">
+          <h1 class="lg:text-6xl  text-3xl uppercase  mb-2 dark:text-white">Título</h1>
+          <p class="lg:text-3xl text-xl">Descripción del proyecto</p>
+        </div>
+        <div class="relative z-0">
+          <img src="/plano-arriba.jpg" alt="" class="rounded-tr-[250px] w-64 lg:w-[400px] h-[600px]  z-10">
+          <div class="rounded-tr-[250px] mx-auto w-64 lg:w-[400px] h-[600px]  absolute -right-6 border-[#323525] -z-10 top-0  border"> </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="py-10"></div>
+
+    
+
+  </section>
+
+  <section class="min-h-screen flex justify-center  w-fit lg:w-screen max-w-5xl mx-auto px-4 items-center">
+    <div class="flex flex-col gap-12 justify-center lg:flex-row lg:justify-between flex-1">
+      <div class="flex flex-col justify-center">
+        <p class="text-9xl"> FAQ </p>
+        <p class="text-3xl"> Subtítulo </p>
+      </div>
+      <div>
+       <p class="my-3 flex items-center gap-3"> Pregunta?    <Icon name={"lucide:mountain-snow"} class="overflow-hidden inline-flex w-6 h-6" />  </p>
+       <p class="my-3 flex items-center gap-3"> otra pregunta?   <Icon name={"lucide:mountain-snow"} class="overflow-hidden inline-flex w-6 h-6" />  </p>
+       <p class="my-3 flex items-center gap-3"> Una pregunta más?   <Icon name={"lucide:mountain-snow"} class="overflow-hidden inline-flex w-6 h-6" />  </p>
+       <p class="my-3 flex items-center gap-3"> Pregunta final?   <Icon name={"lucide:mountain-snow"} class="overflow-hidden inline-flex w-6 h-6" />  </p>
+      </div>
+    </div>
+  </section>
+  
+  <div class="flex justify-center px-6">
+    <section id="contacto" class="bg-[#afb277] lg:rounded-t-[100px] rounded-t-[50px] w-[90%] lg:p-12 p-3 py-6">
+      <div class="lg:flex gap-6 justify-between">
+        <div>
+          <p class="ml-3 lg:ml-0 text-3xl lg:text-5xl"> Contacto </p>
+          <p class="ml-3 lg:ml-0 text-lg lg:text-2xl"> Descripción de la página </p>
+        </div>
+        <div class="flex flex-col gap-5 text-black mt-6 lg:mt-0">
+          <input type="text" class="rounded-tl-full rounded-br-full py-1 px-5">
+          <input type="text" class="rounded-tl-full rounded-br-full py-1 px-5">
+          <input type="text" class="rounded-tl-full rounded-br-full py-1 px-5">
+          
+          <textarea name="" id="" cols="30" rows="10" class="rounded-tl-3xl rounded-br-3xl p-2">
+
+          </textarea>
+          <button class="px-3 py-2 bg-[#6f7959] text-white rounded-full">Enviar </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
 </Layout>
 
+
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+
+.shadow-right {
+  -moz-box-shadow: 20px 20px  #606543;
+  -webkit-box-shadow: 20px 20px  #606543;
+  box-shadow: 20px 20px  #606543;
+}
 </style>
